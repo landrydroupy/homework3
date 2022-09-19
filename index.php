@@ -17,7 +17,7 @@
   <tbody>
     <?php
 $servername = "localhost";
-$username = "landryou_homework3data";
+$username = "landryou_user";
 $password = "A2kYbmhiMHTE";
 $dbname = "landryou_homework3data";
 
