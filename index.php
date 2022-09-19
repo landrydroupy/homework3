@@ -17,9 +17,9 @@
   <tbody>
     <?php
 $servername = "localhost";
-$username = "projecto_homework3";
-$password = "0w_zeP}]OVy0";
-$dbname = "projecto_homework3";
+$username = "landryou_homework3data";
+$password = "A2kYbmhiMHTE";
+$dbname = "landryou_homework3data";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -28,7 +28,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT instructor_id, instructor_name from instructor";
+$sql = "SELECT courseid,prefix,coursenumber,description FROM course";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -36,8 +36,9 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["instructor_id"]?></td>
-    <td><?=$row["instructor_name"]?></td>
+    <td><?=$row["courseid"]?></td>
+    <td><?=$row["prefix"]?></td>
+     <td><?=$row["number"]?></td>
   </tr>
 <?php
   }
@@ -59,3 +60,4 @@ E-mail: <input type="text" name="email"><br>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
 </html>
+
