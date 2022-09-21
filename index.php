@@ -10,8 +10,10 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>ID</th>
-      <th>Name</th>
+      <th>courseid</th>
+      <th>prefix</th>
+      <th>number</th>
+      <th>description</th>
     </tr>
   </thead>
   <tbody>
@@ -39,6 +41,7 @@ if ($result->num_rows > 0) {
     <td><?=$row["courseid"]?></td>
     <td><?=$row["prefix"]?></td>
      <td><?=$row["number"]?></td>
+    <td><?=$row["description"]?></td>
   </tr>
 <?php
   }
