@@ -45,7 +45,7 @@ if ($result->num_rows > 0) {
     <td><?=$row["courseid"]?></td>
     <td><?=$row["fname"]?></td>
     <td><?=$row["lname"]?></td>
-    <td><?=$row["lname"]?></td>
+    <td><?=$row["grade"]?></td>
     <td>
       
     </td>
