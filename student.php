@@ -50,7 +50,7 @@ if ($result->num_rows > 0) {
     <td>
       <form method="post" action="student-course.php">
         <input type="hidden" name="id" value="<?=$row["courseid"]?>" />
-        <input type="submit" value="Course" />
+        <input type="submit" value="View Course" />
     </td>
   </tr>
 <?php
