@@ -48,7 +48,9 @@ if ($result->num_rows > 0) {
     <td><?=$row["lname"]?></td>
     <td><?=$row["grade"]?></td>
     <td>
-      
+      <form method="post" action="student-course.php">
+        <input type="hidden" name="id" value="<?=$row["courseid"]?>" />
+        <input type="submit" value="Course" />
     </td>
   </tr>
 <?php
