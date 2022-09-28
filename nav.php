@@ -7,9 +7,6 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="course.php">Courses</a>
         </li>
         <li class="nav-item">
