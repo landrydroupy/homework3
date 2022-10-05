@@ -14,7 +14,6 @@
     <tr>
      <th>First Name</th>
       <th>Last Name</th>
-      <th>prefix</th>
      <th>description</th>
       <th>prefix</th>
       <th>number</th>
