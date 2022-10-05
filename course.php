@@ -9,17 +9,8 @@
   </head>
   <body>
     <h1>Courses</h1>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Prefix</th>
-      <th>Number</th>
-      <th>Description</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
+
+<div class="card-group">
     <?php
 $servername = "localhost";
 $username = "landryou_user";
@@ -33,22 +24,28 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * from course";
+$sql = "SELECT courseid,fname, lname from student";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
 ?>
-  <tr>
-    <td><?=$row["courseid"]?></td>
-    <td><?=$row["prefix"]?></td>
-    <td><?=$row["number"]?></td>
-    <td><?=$row["description"]?></td>
-    <td>
-      
-    </td>
-  </tr>
+   <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><?=$row["fname"]?></h5>
+      <p class="card-text"><ul>
+<?php
+    $section_sql = "select c.description from section s join instructor i on i.instructor_id = s.instructor_id join course c on c.course_id = s.course_id where i.instructor_id=" . $row["instructor_id"];
+    $section_result = $conn->query($section_sql);
+    
+    while($section_row = $section_result->fetch_assoc()) {
+      echo "<li>" . $section_row["description"] . "</li>";
+    }
+?>
+      </ul></p>
+  </div>
+    </div>
 <?php
   }
 } else {
@@ -56,8 +53,8 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 ?>
-  </tbody>
-    </table>
+  </card-group>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
 </html>
