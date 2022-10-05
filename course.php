@@ -45,7 +45,7 @@
 	  while($row = $result->fetch_assoc()) {
 	?>
 	  <tr>
-	    <td>href="course-grades.php?id=<?=$row["courseid"]?>"><?=$row["courseid"]?></td>
+	    <td><a href="course-grades.php?id=<?=$row["courseid"]?>"><?=$row["courseid"]?></td>
 	    <td><?=$row["prefix"]?></td>
 	    <td><?=$row["number"]?></td>
 	    <td><?=$row["description"]?></td>
