@@ -1,7 +1,7 @@
 <!doctype html>
 <?php include("nav.php");?>
 
-<h1> Welcome to my database website, this will contain 4 seperate tables describing different aspects of the university of oklahoma.<h1>
+<h1 style:"text-align:center"> Welcome to my database website, this will contain 4 seperate tables describing different aspects of the university of oklahoma.<h1>
 
 
 
