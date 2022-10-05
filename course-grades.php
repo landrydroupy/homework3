@@ -33,7 +33,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-$iid = $_GET['id'];
+$cid = $_GET['id'];
 
 $sql = "select fname, lname, grade,c.prefix, c.number, c.description from student s join course c on s.courseid = c.courseid where c.courseid=" . $cid;
 
