@@ -33,7 +33,7 @@ if ($result->num_rows > 0) {
 ?>
    <div class="card">
     <div class="card-body">
-      <h5 class="card-title"><?=$row["description"]?><?=$row["prefix"]?><?=$row["number"]?></h5>
+      <h5 class="card-title"><?=$row["description"]?> - <?=$row["prefix"]?><?=$row["number"]?></h5>
       <p class="card-text"><ul>
 <?php
     $section_sql = "select fname, lname, grade,c.prefix, c.number, c.description from student s join course c on s.courseid = c.courseid where c.courseid=" . $row["courseid"];
