@@ -35,7 +35,7 @@ if ($conn->connect_error) {
 }
 $cid = $_POST['id'];
 
-$sql = "select courseid, description, i.instructor_name, c.prefix, c.number, i.instructor_office from course c join instructor i on i.instructor_id = c.instructor_id where c.instructor_id=" . $cid;
+$sql = "select fname, lname, grade,c.prefix, c.number, c.description from student s join course c on s.courseid = c.courseid where c.courseid=" . $cid;
 
     $result = $conn->query($sql);
 
@@ -44,12 +44,11 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["course_id"]?></td>
-    <td><?=$row["description"]?></td>
-    <td><?=$row["number"]?></td>
     <td><?=$row["prefix"]?></td>
-    <td><?=$row["instructor_name"]?></td>
-    <td><?=$row["instructor_office"]?></td>
+    <td><?=$row["number"]?></td>
+    <td><?=$row["fname"]?></td>
+    <td><?=$row["lname"]?></td>
+    <td><?=$row["grade"]?></td>
   </tr>
 <?php
   }
