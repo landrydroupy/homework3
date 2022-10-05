@@ -24,7 +24,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT courseid,description from course";
+$sql = "SELECT courseid,description,prefix,number from course";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
