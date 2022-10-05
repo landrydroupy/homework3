@@ -12,13 +12,12 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>fname</th>
-      <th>lname</th>
+     
+     <th>description</th>
       <th>prefix</th>
       <th>number</th>
       <th>grade</th>
-      <th>description</th>
-      
+ 
     </tr>
   </thead>
   <tbody>
@@ -46,12 +45,10 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["fname"]?></td>
-    <td><?=$row["lname"]?></td>
+    <td><?=$row["description"]?></td>
     <td><?=$row["prefix"]?></td>
     <td><?=$row["number"]?></td>
     <td><?=$row["grade"]?></td>
-    <td><?=$row["description"]?></td>
     <td>
       
     </td>
