@@ -35,9 +35,9 @@ if ($conn->connect_error) {
 }
 
 $cid = $_POST['id'];
-echo $cid;
+//echo $cid;
 $sql = "select fname, lname, grade,c.prefix, c.number, c.description from student s join course c on s.courseid = c.courseid where c.courseid=" . $cid;
-echo $sql;
+//echo $sql;
     $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
